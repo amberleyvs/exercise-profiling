@@ -30,3 +30,42 @@ The results show the response time for each request. All requests were successfu
 I also executed this test using the command line:
 
 ![Highest GPA CLI Result](images/results3.png)
+
+## Performance Optimization Results
+
+### CPU Profiling (After Optimization)
+
+After optimizing the methods in `StudentService`, I ran the profiler again to check the CPU time.
+
+The main improvements were in:
+- `getAllStudentsWithCourses()`
+- `joinStudentNames()`
+- `findStudentWithHighestGpa()`
+
+After refactoring, the CPU time for these methods decreased. This means that the code is now more efficient compared to the previous version.
+
+---
+
+## JMeter Performance Testing (After Optimization)
+
+### /all-student
+
+![All Student Test](images/all-students-optimized.png)
+
+---
+
+### /all-student-name
+
+![All Student Name Test](images/all-students-name-optimized.png)
+
+---
+
+### /highest-gpa
+
+![Highest GPA Test](images/highest-gpa-optimized.png)
+
+---
+
+## Compare JMeter output
+
+After running JMeter again, the response times are faster compared to the first test. The endpoints now handle requests more efficiently, and the sample times are lower than before.
